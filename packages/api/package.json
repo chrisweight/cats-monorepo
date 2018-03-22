@@ -1,0 +1,29 @@
+{
+  "name": "cats-api",
+  "version": "1.0.0",
+  "description": "CATS platform REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chrisweight/cats-api.git"
+  },
+  "keywords": [
+    "cats",
+    "api"
+  ],
+  "author": "CATSRUS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisweight/cats-api/issues"
+  },
+  "homepage": "https://github.com/chrisweight/cats-api#readme",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "nodemon": "1.17.2"
+  }
+}
