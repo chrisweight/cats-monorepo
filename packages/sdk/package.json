@@ -1,6 +1,6 @@
 {
   "name": "@cats/sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sanitized SDK for consuming CATS platform and tooling",
   "main": "./dist/bundle.js",
   "scripts": {
