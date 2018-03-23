@@ -15,19 +15,18 @@ http
         response.setHeader('Access-Control-Allow-Origin', '*')
         response.setHeader('Access-Control-Request-Method', '*')
         response.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET')
-        response.setHeader('Access-Control-Allow-Headers', request.headers.origin || '*');
+        response.setHeader('Access-Control-Allow-Headers', request.headers.origin || '*')
 
         if (request.method === 'OPTIONS') {
-          response.writeHead(200);
-          response.end();
-          return;
+          response.writeHead(200)
+          response.end()
+          return
         }
 
         response.writeHead(200, contentType)
         response.end(JSON.stringify(result), encoding)
       })
       .catch((error) => {
-				console.error(error)
         response.writeHead(500, contentType)
         response.end(JSON.stringify(error), encoding)
       })
