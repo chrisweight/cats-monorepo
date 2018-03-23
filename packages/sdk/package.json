@@ -1,5 +1,5 @@
 {
-  "name": "cats-sdk",
+  "name": "@cats/sdk",
   "version": "1.0.0",
   "description": "Sanitized SDK for consuming CATS platform and tooling",
   "main": "./src/index.js",
