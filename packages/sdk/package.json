@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src/**/*.js",
-    "build": "rollup --config"
+    "build": "webpack mode=development"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,11 @@
   },
   "devDependencies": {
     "eslint": "4.19.1",
+    "path": "0.12.7",
     "rollup": "0.57.1",
     "rollup-plugin-commonjs": "9.1.0",
-    "rollup-plugin-node-resolve": "3.3.0"
+    "rollup-plugin-node-resolve": "3.3.0",
+    "webpack": "4.2.0",
+    "webpack-cli": "2.0.13"
   }
 }
