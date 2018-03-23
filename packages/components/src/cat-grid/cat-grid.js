@@ -1,7 +1,7 @@
 import CatsService from '@cats/sdk'
 import Filter from './cat-grid.filters'
 
-class CatGrid extends HTMLElement {
+export default class CatGrid extends HTMLElement {
   createdCallback() {
     console.log('CatGrid.createdCallback()')
 
@@ -17,4 +17,3 @@ class CatGrid extends HTMLElement {
   }
 }
 
-document.registerElement('cat-grid', CatGrid)
