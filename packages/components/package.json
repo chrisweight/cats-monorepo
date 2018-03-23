@@ -4,8 +4,8 @@
   "description": "Standardised components for CATS platform hookup",
   "main": "./src/index.js",
   "scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"lint": "eslint ./src/**/*.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/chrisweight/cats-components/issues"
   },
-  "homepage": "https://github.com/chrisweight/cats-components#readme"
+  "homepage": "https://github.com/chrisweight/cats-components#readme",
+  "dependencies": {
+    "@cats/sdk": "1.0.0"
+  }
 }

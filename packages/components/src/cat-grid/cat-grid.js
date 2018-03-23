@@ -5,9 +5,11 @@ class CatGrid extends HTMLElement {
   createdCallback() {
     console.log('CatGrid.createdCallback()')
 
+    this._service = new CatsService()
+
     this.innerHTML = `<div class="loading">LOADING...</div>`
 
-    CatsService
+    this._service
       .retrieve()
       .then(Filter)
       .then(imgs => this.innerHTML = `<div id="gifs">${imgs}</div>`)
