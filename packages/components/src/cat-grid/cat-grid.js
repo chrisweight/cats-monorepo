@@ -10,7 +10,7 @@ export class CatGrid extends HTMLElement {
     this.innerHTML = `<div class="loading">LOADING...</div>`
 
     this._service
-      .retrieve()
+      .get()
       .then(Filter)
       .then(imgs => this.innerHTML = `<div id="gifs">${imgs}</div>`)
       .catch(error => this.innerHTML = `<div class="error">ERROR! :[</div>`)
