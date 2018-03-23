@@ -5,7 +5,7 @@ export class CatGrid extends HTMLElement {
   createdCallback() {
     this._service = new CatsService()
 
-    this.innerHTML = '<div class="loading">LOADING...</div>'
+    this.innerHTML = '<div class="loading">LOADING...Mayyybe!</div>'
 
     this._service
       .get()
