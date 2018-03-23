@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch'
 
-export default class DefaultHttpClient {
+export class DefaultHttpClient {
   formatQueryString(params) {
     return (params && Object.keys(params).length)
       ? Object

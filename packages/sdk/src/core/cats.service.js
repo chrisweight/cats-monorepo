@@ -1,6 +1,6 @@
-import DefaultHttpClient from '../http/http.client'
+import {DefaultHttpClient} from '../http/http.client'
 
-export default class CatsService {
+export class CatsService {
   constructor(config, http) {
     this._config = config || {
       url: 'http://localhost:9999',
