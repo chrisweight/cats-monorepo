@@ -1,54 +1,46 @@
-var catsSDK = (function (exports,fetch) {
-  'use strict';
+import fetch from 'cross-fetch';
 
-  fetch = fetch && fetch.hasOwnProperty('default') ? fetch['default'] : fetch;
+class DefaultHttpClient {
+  formatQueryString(params) {
+    return (params && Object.keys(params).length)
+      ? Object
+        .keys(params)
+        .map(i => `${encodeURIComponent(i)}=${encodeURIComponent(params[i])}`, '')
+        .join('&')
+      : undefined
+  }
 
-  class DefaultHttpClient {
-    formatQueryString(params) {
-      return (params && Object.keys(params).length)
-        ? Object
-          .keys(params)
-          .map(i => `${encodeURIComponent(i)}=${encodeURIComponent(params[i])}`, '')
-          .join('&')
-        : undefined
-    }
+  get(url, params) {
+    const _params = this.formatQueryString(params);
 
-    get(url, params) {
-      const _params = this.formatQueryString(params);
+    const _url = _params !== undefined
+      ? `${url}?${this.formatQueryString(params)}`
+      : url;
 
-      const _url = _params !== undefined
-        ? `${url}?${this.formatQueryString(params)}`
-        : url;
+    // eslint-disable-next-line no-console
+    console.log(`HttpService.get(${_url}`);
 
-      // eslint-disable-next-line no-console
-      console.log(`HttpService.get(${_url}`);
+    return fetch(_url)
+      .then(res => res.json())
+  }
 
-      return fetch(_url)
-        .then(res => res.json())
-    }
-
-    /**
+  /**
 	 * post(), put(), patch(), delete(), etc....
 	 */
+}
+
+class CatsService {
+  constructor(config, http) {
+    this._config = config || {
+      url: 'http://localhost:9999',
+    };
+
+    this._http = http || new DefaultHttpClient();
   }
 
-  class CatsService {
-    constructor(config, http) {
-      this._config = config || {
-        url: 'http://localhost:9999',
-      };
-
-      this._http = http || new DefaultHttpClient();
-    }
-
-    get() {
-      return this._http.get(this._config.url)
-    }
+  get() {
+    return this._http.get(this._config.url)
   }
+}
 
-  exports.DefaultHttpClient = DefaultHttpClient;
-  exports.CatsService = CatsService;
-
-  return exports;
-
-}({},fetch));
+export { DefaultHttpClient, CatsService };
