@@ -1,12 +1,12 @@
 {
   "name": "@cats/components",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Standardised components for CATS platform hookup",
   "main": "./dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"lint": "eslint ./src/**/*.js",
-		"build": "rollup ./src/index.js --o ./dist/bundle.js --f iife"
+    "lint": "eslint ./src/**/*.js",
+    "build": "rollup ./src/index.js --o ./dist/bundle.js --f iife"
   },
   "repository": {
     "type": "git",
