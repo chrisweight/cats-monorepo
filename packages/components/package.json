@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src/**/*.js",
-    "build": "rollup ./src/index.js --o ./dist/bundle.js --f iife"
+    "build": "rollup ./src/index.js --o ./dist/bundle.js -f umd --name \"myBundlee\""
   },
   "repository": {
     "type": "git",
