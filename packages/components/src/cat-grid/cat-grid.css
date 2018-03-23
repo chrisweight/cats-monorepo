@@ -1,0 +1,17 @@
+cat-grid #gifs>img {
+    display: block;
+    float: left;
+    width: 24.25vw;
+    height: 24.25vw;
+    object-fit: cover;
+}
+
+cat-grid .loading {
+    display: block;
+    color: green;
+}
+
+cat-grid .error {
+    display: block;
+    color: red;
+}
