@@ -1,5 +1,5 @@
 {
-  "name": "cats-components",
+  "name": "@cats/components",
   "version": "0.0.9",
   "description": "Standardised components for CATS platform hookup",
   "main": "./src/index.js",
