@@ -1,12 +1,12 @@
 {
   "name": "@cats/sdk",
-  "version": "1.1.0",
+  "version": "1.0.4",
   "description": "Sanitized SDK for consuming CATS platform and tooling",
   "main": "./dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src/**/*.js",
-    "build": "webpack mode=development"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
