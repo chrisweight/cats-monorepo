@@ -2,7 +2,7 @@
   "name": "@cats/sdk",
   "version": "1.0.1",
   "description": "Sanitized SDK for consuming CATS platform and tooling",
-  "main": "./dist/index.js",
+  "main": "./dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src/**/*.js",
