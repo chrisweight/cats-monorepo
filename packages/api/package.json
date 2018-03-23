@@ -2,9 +2,10 @@
   "name": "cats-api",
   "version": "1.0.0",
   "description": "CATS platform REST API",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "nodemon ./index.js"
+		"start": "nodemon ./src/index.js",
+		"lint": "eslint ./src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,9 @@
     "url": "https://github.com/chrisweight/cats-api/issues"
   },
   "homepage": "https://github.com/chrisweight/cats-api#readme",
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
+    "eslint": "4.19.1",
     "nodemon": "1.17.2"
   }
 }
